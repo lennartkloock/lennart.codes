@@ -154,12 +154,12 @@ a:focus, a:hover {
     #bg-stroke {
         z-index: -1;
         position: absolute;
-        transform: translateY(5%);
     }
 
     #path {
-        stroke-dashoffset: 5983;
-        stroke-dasharray: 5983;
+        /*Get with path.getTotalLength()*/
+        stroke-dashoffset: 3418;
+        stroke-dasharray: 3418;
         animation: 1s ease-out calc(var(--heading-slide-delay) + var(--heading-slide-duration) + var(--link-in-duration)) forwards stroke;
     }
 
