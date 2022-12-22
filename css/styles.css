@@ -58,10 +58,19 @@ body {
 main {
     color: white;
     background: #222222;
-    min-height: 100vh;
 
     /*To be on top*/
     position: relative;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-height {
+    min-height: 100vh;
 }
 
 h1 {
@@ -120,6 +129,12 @@ h1 {
 
 .thin {
     font-weight: 100;
+}
+
+.pingu {
+    font-size: 3rem;
+    background: white;
+    padding: 0.5rem;
 }
 
 a {
