@@ -1,5 +1,5 @@
 :root {
-    --color: black;
+    --cover-color: black;
     --bg-color: white;
     --heading-slide-delay: 0.2s;
     --heading-slide-duration: 0.4s;
@@ -8,11 +8,13 @@
 
 html {
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--bg-color);
+    color: white;
 
     width: 100vw;
     min-height: 100vh;
@@ -23,18 +25,18 @@ body {
 .cover {
     width: 100vw;
     min-height: 100vh;
+    color: var(--cover-color);
+    font-size: 1.25rem;
 }
 
 .cover-container {
     position: fixed;
-    display: grid;
-    place-items: center;
 
     width: 100vw;
     min-height: 100vh;
 }
 
-.heading-container {
+.link-container {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -42,7 +44,10 @@ body {
     gap: 1.5em;
 
     max-width: 60ch;
+    padding: 0 2rem 0 2rem;
+}
 
+.scroll-animation {
     /*https://css-tricks.com/books/greatest-css-tricks/scroll-animation/*/
     animation: scale 1s linear infinite;
     animation-play-state: paused;
@@ -83,7 +88,6 @@ h1 {
     margin-left: 0.5em;
     margin-right: 0.5em;
     font-weight: normal;
-    color: var(--color);
 }
 
 @media screen and (min-width: 600px) {
@@ -131,16 +135,9 @@ h1 {
     font-weight: 100;
 }
 
-.pingu {
-    font-size: 3rem;
-    background: white;
-    padding: 0.5rem;
-}
-
 a {
-    color: var(--color);
+    color: inherit;
     text-decoration: none;
-    font-size: 1.25rem;
     transition: letter-spacing .1s;
     animation: var(--link-in-duration) ease-out calc(var(--heading-slide-delay) + var(--heading-slide-duration)) backwards link-in;
 }
@@ -148,6 +145,10 @@ a {
 a:focus, a:hover {
     letter-spacing: 0.1ch;
     font-weight: 700;
+}
+
+#projects {
+    font-size: 1.75rem;
 }
 
 @keyframes link-in {
